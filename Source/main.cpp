@@ -5,10 +5,12 @@ int main(void){
     Stack st = {};
     STACK_ASSERT(st);
     StackCtor(&st, 8);
-    StackPush(&st, OK);
+    for (int i = 1; i < 113; i++)
+        StackPush(&st, i);
     int e = 12;
     DUMP(st);
-    StackPop(&st, &e);
+    for  (int i = 0; i < 100; i++)
+        StackPop(&st, &e);
     printf("%d",e);
     return 0;
 }
